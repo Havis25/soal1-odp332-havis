@@ -1,16 +1,38 @@
 // Jumlahkan semua angka genap dalam array berikut
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-let resultOne
+let resultOne = 0;
+
+// Jawaban soal 1
+for (let index = 0; index < numbers.length; index++) {
+  if (numbers[index] % 2 === 0) {
+    resultOne += numbers[index];
+  }
+}
+console.log("jawabannya adalah:", resultOne, "==> Ini Baris ke 11");
 
 
 const numbersTwo = [1, 2, 3, 4, 5, 6, 7, 8];
 //Tambahkan semua angka ganjil dalam array dan kembalikan hasilnya.
-let resultTwo
+
+//Jawaban soal No 2
+let resultTwo=0;
+for (let index = 0; index < numbersTwo.length; index++) {
+    if (numbersTwo[index] % 2 !== 0) {
+        resultTwo += numbersTwo[index];
+    }   
+}
+console.log ("Jawabannya adalah:", resultTwo, "==>Ini baris ke 24");
 
 
 // Ubah semua huruf kecil dalam array menjadi huruf besar
 let students = ["Tito", "arY", "Bostang"]
-let resultThree
+let resultThree;
+
+// jawaban soal no 3
+resultThree = students.map((student) => {
+  return student.toUpperCase();
+});
+console.log("jawabannya adalah: ", resultThree, "==>ini baris ke 35");
 
 
 // Ambil hanya nama-nama orang yang umurnya di atas 18 tahun.
@@ -21,7 +43,13 @@ const people = [
     { name: 'Bostang', age: 22 },
     { name: 'Cici', age: 17 }
 ];
-
+//Ini jawaban soal no 4
+let resultFour = [];
+for (let index = 0; index < people.length; index++) {
+    if (people[index].age >= 18 && people[index].name.length >5);
+    resultFour.push(people[index].name);
+}
+console.log ("Orangnya adalah", resultFour, "==> Ini Baris ke 52");
 
 // Hitung total harga semua barang
 const items = [
@@ -29,10 +57,25 @@ const items = [
     { name: 'Pen', price: 5000 },
     { name: 'Pencil', price: 3000 },
 ];
-  
+
+// jawaban soal No 5
+let resultFive = 0;
+for (let index = 0; index < items.length; index++) {
+    resultFive += items[index].price;  
+}
+console.log ("Total Items", resultFive, "==>ini baris ke 66")
 
 //Ambil hanya angka unik dari array (hapus duplikat).
 const numbersThree = [1, 2, 2, 3, 4, 4, 5];
+
+// jawaban no 6
+let resultSix = [];
+for (let index = 0; index < numbersThree.length; index++) {
+  if (resultSix.includes(numbersThree[index]) === false) {
+    resultSix.push(numbersThree[index]);
+  }
+}
+console.log("jawabannya adalah :", resultSix, "==> ini baris ke 78");
 
 
 // Ambil nama produk dengan harga tertinggi
