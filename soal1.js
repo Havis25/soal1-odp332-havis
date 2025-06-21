@@ -85,17 +85,45 @@ const products = [
     { name: 'Monitor', price: 3000000 },
 ];
 
+// jawaban no 7
+let resultSeven;
+for (let index = 0; index < products.length; index++) {
+  if (typeof resultSeven !== "number" || products[index].price > resultSeven) {
+    resultSeven = products[index].price;
+  }
+}
+console.log("Jawabannya adalah : ", resultSeven, "==>ini baris ke 95");
 
 // Buat kalimat dari array kata.
 const words = ['Belajar', 'array', 'itu', 'menyenangkan'];
 
+//jwaban no 8
+let answerEight = words.join(" ");
+console.log("jawabannya adalah: ", answerEight, "==>ini baris ke 102");
 
 // Ambil hanya 3 data pertama yang mengandung kata 'a' pada nama.
 const names = ['Aldo', 'Budi', 'Caca', 'Dinda', 'Eka', 'Fajar'];
 
+//jawaban n0 9
+let answerNine = [];
+for (let index = 0; index < names.length; index++) {
+  const lowerCaseName = names[index].toLocaleLowerCase();
+
+  if (lowerCaseName.includes("a") && answerNine.length < 3) {
+    answerNine.push(names[index]);
+  }
+}
+console.log("Jawabanya adalah : ", answerNine, "==> ini baris ke 116");
 
 // Hitung total karakter dari semua nama dalam array.
 const namesTwo = ['Ani', 'Budi', 'Citra']; // 12 karakter
+
+//jawaban no 10
+let resultTen =0;
+for (let index = 0; index < namesTwo.length; index++) {
+   resultTen += namesTwo[index].length; 
+}
+console.log("jawabanya adalah :", resultTen, "==> ini baris ke 126 ")
 
 
 // Output: ['Tono (22)', 'Tara (25)']
@@ -106,3 +134,10 @@ const peopleTwo = [
     { name: 'Tara', age: 25 },
 ];
 
+let asnwerEleven =[];
+for (let index = 0; index < peopleTwo.length; index++) {
+  if (peopleTwo[index].age >21){
+    asnwerEleven.push(`${peopleTwo[index].name} (${peopleTwo[index].age})`)
+  }
+}
+console.log ("jawabannya adalah :", asnwerEleven, "==>ini baris ke 143");
