@@ -1,27 +1,38 @@
 /**
  * Menentukan bilangan ganjil dan genap
- * 
+ *
  * Buatlah program untuk menentukan input bilangan apakah ganjil atau genap. Gunakan if-else dan function yang mengembalikan hasil "ganjil"/"genap"
  */
 
-function checkOddEven() {
-
+function checkOddEven(number1) {
+  if (typeof number1 === "number") {
+    if (number1 % 2 === 0) {
+      return "genap";
+    } else {
+      return "ganjil";
+    }
+  } else return "invalid Input";
 }
-
 console.log(checkOddEven(5)); // ganjil
 console.log(checkOddEven(2)); // genap
 console.log(checkOddEven("enam")); // invalid input
 
-
-
 /**
  * Menentukan usia dewasa
- * 
- * Buat sebuah program yang meminta usia seseorang, lalu gunakan if-else untuk menampilkan apakah seseorang tersebut sudah dewasa (>=18 tahun) atau belum. Gunakan if-else dan function yang mengembalikan string
+ *
+ * Buat sebuah program yang meminta usia seseorang, lalu gunakan if-else untuk menampilkan
+ * apakah seseorang tersebut sudah dewasa (>=18 tahun) atau belum.
+ * Gunakan if-else dan function yang mengembalikan string
  */
 
-function checkMature() {
-
+function checkMature(Age1) {
+  if (typeof Age1 !== "number" || Age1 < 0) {
+    return "invalid input";
+  } else if (Age1 >= 18) {
+    return "Dewasa";
+  } else if (Age1 <= 17) {
+    return "Belum Dewasa";
+  }
 }
 
 console.log(checkMature(18)); // Dewasa
@@ -29,11 +40,9 @@ console.log(checkMature(17)); // Belum dewasa
 console.log(checkMature("enam")); // invalid input
 console.log(checkMature(-1)); // invalid input
 
-
-
 /**
  * Menentukan score student
- * 
+ *
  * Buat program yang mengubah nilai angka ke dalam nilai huruf (A, B, C, D, E) berdasarkan rentang berikut:
  * 90 - 100: A
  * 80 - 89: B
@@ -43,8 +52,24 @@ console.log(checkMature(-1)); // invalid input
  * Gunakan if-else dan function yang mengembalikan string
  */
 
-function scoreReport() {
-
+function scoreReport(Nilaireport) {
+  if (
+    typeof Nilaireport !== "number" ||
+    Nilaireport < 0 ||
+    Nilaireport >= 101
+  ) {
+    return "invalid input";
+  } else if (90 >= Nilaireport <= 100) {
+    return "A";
+  } else if (80 >= Nilaireport <= 89) {
+    return "B";
+  } else if (70 >= Nilaireport <= 79) {
+    return "C";
+  } else if (60 >= Nilaireport <= 69) {
+    return "D";
+  } else if (Nilaireport <= 60) {
+    return "E";
+  }
 }
 
 console.log(scoreReport(90)); // A
@@ -55,72 +80,59 @@ console.log(scoreReport(101)); // invalid input
 console.log(scoreReport(-1)); // invalid input
 console.log(scoreReport("sembilan puluh")); // invalid input
 
-
-
 /**
  * Menampilkan Bilangan Ganjil dari 1 sampai 20
- * 
+ *
  * Buat program yang menampilkan semua bilangan ganjil dari 1 sampai 20 menggunakan for loop
  */
 
-function loopCheckOddEven() {
+function loopCheckOddEven() {}
 
-}
-
-loopCheckOddEven(5)
+loopCheckOddEven(5);
 // 1 => Bilangan Ganjil
 // 2 => Bilangan Genap
 // 3 => Bilangan Ganjil
 // 4 => Bilangan Genap
 // 5 => Bilangan Ganjil
-loopCheckOddEven("lima") // invalid input
-
-
+loopCheckOddEven("lima"); // invalid input
 
 /**
  * Menghitung Total Jumlah Angka
- * 
+ *
  * Buat program yang menjumlahkan semua angka dari 1 sampai dengan 100 menggunakan loop. Gunakan function yang mengirimkan value hasil penjumlahan tersebut
  */
 
 function totalValue(inputNumber) {
-    if (typeof inputNumber === "number"){
-        let totalNumber = 0
-        for (let index = 1; index <=inputNumber;  index++){
-            totalNumber = totalNumber + index
-        }
-        console.log(totalNumber)
-    }else {
-        console.log("Invalid Number")
+  if (typeof inputNumber === "number") {
+    let totalNumber = 0;
+    for (let index = 1; index <= inputNumber; index++) {
+      totalNumber = totalNumber + index;
     }
-
+    console.log(totalNumber);
+  } else {
+    console.log("Invalid Number");
+  }
 }
 
 console.log(totalValue(100)); // 5050
 console.log(totalValue("empat")); // invalid input
 
-
-
 /**
  * Menghitung huruf vokal
- * 
+ *
  * Buat program yang menerima sebuah string, lalu hitung berapa banyak huruf vokal (a, e, i, o, u) di dalam string tersebut. Gunakan function untuk mengembalikan value total jumlah huruf vocal
  */
 
-function checkVowels() {
-
-}
+function checkVowels() {}
 
 console.log(checkVowels("I Love JavaScript")); // 6
 console.log(checkVowels("mie ayam")); //4
 
-
-
 /**
  * Cek karakter vokal atau konsonan
- * 
+ *
  * Buatlah sebuah fungsi untuk memeriksa apakah sebuah karakter adalah vokal atau konsonan
- * 
+ *
  * Langkah:
  * 1. Buat sebuah fungsi bernama checkVowelConsonant.
  * 2. Fungsi tersebut harus menerima satu parameter, contoh nama parameternya "char".
@@ -130,20 +142,18 @@ console.log(checkVowels("mie ayam")); //4
  */
 
 function checkVowelConsonant(char) {
-    // code di scope ini yaa
+  // code di scope ini yaa
 }
 
-console.log(checkVowelConsonant('A')); // Output: "Vokal"
-console.log(checkVowelConsonant('b')); // Output: "Konsonan"
-console.log(checkVowelConsonant('a')); // Output: "Vokal"
-
-
+console.log(checkVowelConsonant("A")); // Output: "Vokal"
+console.log(checkVowelConsonant("b")); // Output: "Konsonan"
+console.log(checkVowelConsonant("a")); // Output: "Vokal"
 
 /**
  * Menentukan kelayakan Voting
- * 
+ *
  * Buatlah sebuah fungsi JavaScript yang memeriksa apakah seseorang memenuhi syarat untuk memberikan suara dalam pemilihan berdasarkan usia.
- * 
+ *
  * Langkah:
  * 1. Buat sebuah fungsi bernama canVote.
  * 2. Fungsi tersebut harus menerima satu parameter age.
@@ -152,20 +162,17 @@ console.log(checkVowelConsonant('a')); // Output: "Vokal"
  */
 
 function canVote(age) {
-    // code di scope ini yaa
+  // code di scope ini yaa
 }
 
 console.log(canVote(20)); // true
 console.log(canVote(17)); // false
 
-
-
-
 /**
  * Menentukan Hari dalam Seminggu
- * 
+ *
  * Buatlah sebuah fungsi JavaScript yang menerima angka dan mengembalikan nama hari dalam seminggu.
- * 
+ *
  * Langkah:
  * 1. Buat sebuah fungsi bernama getDayName.
  * 2. Fungsi tersebut harus menerima satu parameter dayNumber (1 sampai 7).
@@ -181,22 +188,19 @@ console.log(canVote(17)); // false
  */
 
 function getDayName(dayNumber) {
-    // code disini
+  // code disini
 }
 
 console.log(getDayName(1)); // Output: "Senin"
 console.log(getDayName(5)); // Output: "Jumat"
 console.log(getDayName(8)); // Output: "Nomor hari tidak valid"
 
-
-
-
 /**
  * Membalikkan Array
- * 
+ *
  * Buatlah sebuah fungsi JavaScript yang membalikkan urutan elemen dalam sebuah array menggunakan loop.
- * 
- * Langkah: 
+ *
+ * Langkah:
  * 1. Buat sebuah fungsi bernama reverseArray.
  * 2. Fungsi tersebut harus menerima satu parameter berupa array arr.
  * 3. Boleh menggunakan built in function, setelah itu dicoba mengunakan loop untuk membalikkan urutan elemen dalam array tersebut.
@@ -204,22 +208,18 @@ console.log(getDayName(8)); // Output: "Nomor hari tidak valid"
  */
 
 function reverseArray(arr) {
-    // code disini yaa
+  // code disini yaa
 }
 
 console.log(reverseArray([1, 2, 3, 4, 5])); // Output: [5, 4, 3, 2, 1]
-console.log(reverseArray(['a', 'b', 'c'])); // Output: ['c', 'b', 'a']
-
-
+console.log(reverseArray(["a", "b", "c"])); // Output: ['c', 'b', 'a']
 
 /**
  * Buat function untuk mengecek apakah input tersebut palindrome, return true jika palindrome, dan jika tidak palindrome maka return false
- * 
+ *
  */
 
-const isPalindrome = (inputUser) => {
-
-}
+const isPalindrome = (inputUser) => {};
 
 console.log(isPalindrome("kasur rusak")); // true
 console.log(isPalindrome("kodok")); // true
