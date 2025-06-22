@@ -26,11 +26,12 @@ console.log("Jawabannya adalah:", resultTwo, "==>Ini baris ke 23"); //output: 16
 let students = ["Tito", "arY", "Bostang"];
 let resultThree;
 
-// jawaban soal no 3
-resultThree = students.map((student) => {
-  return student.toUpperCase();
-});
-console.log("jawabannya adalah: ", resultThree, "==>ini baris ke 33"); //output: ['TITO', 'ARY', 'BOSTANG']
+// Jawaban soal no 3
+resultThree = [];
+for (let index = 0; index < students.length; index++) {
+  resultThree.push(students[index].toUpperCase());
+}
+console.log("jawabannya adalah: ", resultThree, "==>ini baris ke 34"); //output: ['TITO', 'ARY', 'BOSTANG']
 
 // Ambil hanya nama-nama orang yang umurnya di atas 18 tahun.
 // Ambil hanya orang yang panjang namanya lebih dari 5
@@ -40,13 +41,15 @@ const people = [
   { name: "Bostang", age: 22 },
   { name: "Cici", age: 17 },
 ];
+
 //Ini jawaban soal no 4
 let resultFour = [];
 for (let index = 0; index < people.length; index++) {
-  if (people[index].age >= 18 && people[index].name.length > 5);
-  resultFour.push(people[index].name);
+  if (people[index].age >= 18 && people[index].name.length > 5) {
+    resultFour.push(people[index].name);
+  }
 }
-console.log("Orangnya adalah", resultFour, "==> Ini Baris ke 49"); //output: ['Tito Alexsta', 'Bostang']
+console.log("Orangnya adalah", resultFour, "==> Ini Baris ke 52"); //output: ['Tito Alexsta', 'Bostang']
 
 // Hitung total harga semua barang
 const items = [
@@ -60,7 +63,7 @@ let resultFive = 0;
 for (let index = 0; index < items.length; index++) {
   resultFive += items[index].price;
 }
-console.log("Total Items", resultFive, "==>ini baris ke 63"); // output: 18000
+console.log("Total Items", resultFive, "==>ini baris ke 66"); // output: 18000
 
 //Ambil hanya angka unik dari array (hapus duplikat).
 const numbersThree = [1, 2, 2, 3, 4, 4, 5];
@@ -72,7 +75,7 @@ for (let index = 0; index < numbersThree.length; index++) {
     resultSix.push(numbersThree[index]);
   }
 }
-console.log("jawabannya adalah :", resultSix, "==> ini baris ke 75"); // output: [1, 2, 3, 4, 5]
+console.log("jawabannya adalah :", resultSix, "==> ini baris ke 78"); // output: [1, 2, 3, 4, 5]
 
 // Ambil nama produk dengan harga tertinggi
 const products = [
@@ -88,14 +91,14 @@ for (let index = 0; index < products.length; index++) {
     resultSeven = products[index].price;
   }
 }
-console.log("Jawabannya adalah : ", resultSeven, "==>ini baris ke 91"); //output: 15000000
+console.log("Jawabannya adalah : ", resultSeven, "==>ini baris ke 94"); //output: 15000000
 
 // Buat kalimat dari array kata.
 const words = ["Belajar", "array", "itu", "menyenangkan"];
 
 //jwaban no 8
 let answerEight = words.join(" ");
-console.log("jawabannya adalah: ", answerEight, "==>ini baris ke 98"); //output: "Belajar array itu menyenangkan"
+console.log("jawabannya adalah: ", answerEight, "==>ini baris ke 101"); //output: "Belajar array itu menyenangkan"
 
 // Ambil hanya 3 data pertama yang mengandung kata 'a' pada nama.
 const names = ["Aldo", "Budi", "Caca", "Dinda", "Eka", "Fajar"];
@@ -109,7 +112,7 @@ for (let index = 0; index < names.length; index++) {
     answerNine.push(names[index]);
   }
 }
-console.log("Jawabanya adalah : ", answerNine, "==> ini baris ke 112"); // Output: ['Aldo', 'Caca', 'Dinda']
+console.log("Jawabanya adalah : ", answerNine, "==> ini baris ke 115"); // Output: ['Aldo', 'Caca', 'Dinda']
 
 // Hitung total karakter dari semua nama dalam array.
 const namesTwo = ["Ani", "Budi", "Citra"]; // 12 karakter
@@ -119,7 +122,7 @@ let resultTen = 0;
 for (let index = 0; index < namesTwo.length; index++) {
   resultTen += namesTwo[index].length;
 }
-console.log("jawabanya adalah :", resultTen, "==> ini baris ke 122 "); // Output: 12
+console.log("jawabanya adalah :", resultTen, "==> ini baris ke 125 "); // Output: 12
 
 // Output: ['Tono (22)', 'Tara (25)']
 // Ubah array objek ke array string dengan format 'Nama (Umur)' dan hanya yang umurnya di atas 21.
@@ -135,4 +138,4 @@ for (let index = 0; index < peopleTwo.length; index++) {
     asnwerEleven.push(`${peopleTwo[index].name} (${peopleTwo[index].age})`);
   }
 }
-console.log("jawabannya adalah :", asnwerEleven, "==>ini baris ke 138"); // Output: ['Tono (22)', 'Tara (25)']
+console.log("jawabannya adalah :", asnwerEleven, "==>ini baris ke 141"); // Output: ['Tono (22)', 'Tara (25)']

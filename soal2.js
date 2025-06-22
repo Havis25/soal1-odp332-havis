@@ -59,15 +59,15 @@ function scoreReport(Nilaireport) {
     Nilaireport >= 101
   ) {
     return "invalid input";
-  } else if (90 >= Nilaireport <= 100) {
+  } else if (Nilaireport >= 90 && Nilaireport <= 100) {
     return "A";
-  } else if (80 >= Nilaireport <= 89) {
+  } else if (Nilaireport >= 80 && Nilaireport <= 89) {
     return "B";
-  } else if (70 >= Nilaireport <= 79) {
+  } else if (Nilaireport >= 70 && Nilaireport <= 79) {
     return "C";
-  } else if (60 >= Nilaireport <= 69) {
+  } else if (Nilaireport >= 69 && Nilaireport <= 60) {
     return "D";
-  } else if (Nilaireport <= 60) {
+  } else if (Nilaireport < 60) {
     return "E";
   }
 }
@@ -116,14 +116,15 @@ loopCheckOddEven("lima"); // invalid input
  */
 
 function totalValue(inputNumber) {
+  let totalNumber = 0;
   if (typeof inputNumber === "number") {
-    let totalNumber = 0;
     for (let index = 1; index <= inputNumber; index++) {
-      totalNumber = totalNumber + index;
+      totalNumber += index;
     }
-    console.log(totalNumber);
+    console.log("Total Value:", totalNumber);
+    return totalNumber;
   } else {
-    console.log("Invalid Number");
+    console.log("Invalid Input");
   }
 }
 
