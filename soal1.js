@@ -124,7 +124,6 @@ for (let index = 0; index < namesTwo.length; index++) {
 }
 console.log("jawabanya adalah :", resultTen, "==> ini baris ke 125 "); // Output: 12
 
-// Output: ['Tono (22)', 'Tara (25)']
 // Ubah array objek ke array string dengan format 'Nama (Umur)' dan hanya yang umurnya di atas 21.
 const peopleTwo = [
   { name: "Tono", age: 22 },
@@ -132,10 +131,13 @@ const peopleTwo = [
   { name: "Tara", age: 25 },
 ];
 
-let asnwerEleven = [];
+//jawaban no 11
+let resultEleven = [];
 for (let index = 0; index < peopleTwo.length; index++) {
   if (peopleTwo[index].age > 21) {
-    asnwerEleven.push(`${peopleTwo[index].name} (${peopleTwo[index].age})`);
+    resultElevenEleven.push(
+      `${peopleTwo[index].name} (${peopleTwo[index].age})`
+    );
   }
 }
-console.log("jawabannya adalah :", asnwerEleven, "==>ini baris ke 141"); // Output: ['Tono (22)', 'Tara (25)']
+console.log("jawabannya adalah :", resultElevenEleven, "==>ini baris ke 143"); // Output: ['Tono (22)', 'Tara (25)']
